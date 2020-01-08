@@ -1,14 +1,14 @@
 package file;
 
 import java.io.*;
-class Item{
-	
+class Item
+{	
 	private String name;
 	private String type;
 	private double price;
 	private int quantity;
 	private double tax;
-	static String types[]= {"raw","manufactured","imported"};
+	String types[]= {"raw","manufactured","imported"};
 	
 	public String getName() 
 	{
@@ -17,7 +17,7 @@ class Item{
 	
 	public void setName(String nm) 
 	{
-		this.name = nm;
+		name = nm;
 	}
 	
 	public double getTax() 
@@ -34,7 +34,7 @@ class Item{
 	{
 		try 
 		{
-			this.type = types[i-1];
+			type = types[i-1];
 			setTax(i);   
 		}catch(Exception e) 
 		{
@@ -46,17 +46,17 @@ class Item{
 	{
 		return price;
 	}
-	public void setPrice(double price) 
+	public void setPrice(double price1) 
 	{
-		this.price = price;
+		price = price1;
 	}
 	public int getQuantity() 
 	{
 		return quantity;
 	}
-	public void setQuantity(int quantity) 
+	public void setQuantity(int quantity1) 
 	{
-		this.quantity = quantity;
+		quantity = quantity1;
 	}
 	private void setTax(int type) 
 	{
