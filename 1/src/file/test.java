@@ -6,60 +6,60 @@ import org.junit.jupiter.api.Test;
 
 class test
 {
-	Item itemTest;
+	Item testins;
 	
 	@BeforeEach
 	void setUp() throws Exception 
 	{
-		itemTest=new Item();
+		testins=new Item();
 	}
 
 	@Test
 	void testGetName() 
 	{
-		itemTest.setName("pen");
-		assertEquals("pen", itemTest.getName());
+		testins.setName("pen");
+		assertEquals("pen", testins.getName());
 	}
 	
 	@Test
 	void testGetType() 
 	{
-		itemTest.setType(1);
-		assertEquals("raw", itemTest.getType());
+		testins.setType(1);
+		assertEquals("raw", testins.getType());
 		
-		itemTest.setType(2);
-		assertEquals("manufactured", itemTest.getType());
+		testins.setType(2);
+		assertEquals("manufactured", testins.getType());
 		
-		itemTest.setType(3);
-		assertEquals("imported", itemTest.getType());
+		testins.setType(3);
+		assertEquals("imported", testins.getType());
 	}
 
 	@Test
 	void testGetPrice() 
 	{
-		itemTest.setPrice(100);
-		assertEquals(100, itemTest.getPrice());
+		testins.setPrice(100);
+		assertEquals(100, testins.getPrice());
 	}
 
 	@Test
 	void testGetQuantity() 
 	{
-		itemTest.setQuantity(10);
-		assertEquals(10, itemTest.getQuantity());
+		testins.setQuantity(10);
+		assertEquals(10, testins.getQuantity());
 	}
 	@Test
 	void testGetTax() 
 	{
-		itemTest.setPrice(100);
-		itemTest.setType(1);  
-		assertEquals(12.5, itemTest.getTax());
+		testins.setPrice(100);
+		testins.setType(1);  
+		assertEquals(12.5, testins.getTax());
 		
-		itemTest.setPrice(100);
-		itemTest.setType(2); 
-		assertEquals(14.75, itemTest.getTax());
+		testins.setPrice(100);
+		testins.setType(2); 
+		assertEquals(14.75, testins.getTax());
 		
-		itemTest.setPrice(100);
-		itemTest.setType(3); 
-		assertEquals(20.0, itemTest.getTax());
+		testins.setPrice(100);
+		testins.setType(3); ss
+		assertEquals(20.0, testins.getTax());
 	}
 }
