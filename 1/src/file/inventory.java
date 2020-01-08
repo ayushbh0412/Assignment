@@ -3,11 +3,11 @@ package file;
 import java.io.*;
 class Item
 {	
-	private String name;
-	private String type;
-	private double price;
-	private int quantity;
-	private double tax;
+	String name;
+	String type;
+	double price;
+	int quantity;
+	double tax;
 	String types[]= {"raw","manufactured","imported"};
 	
 	public String getName() 
@@ -58,13 +58,13 @@ class Item
 	{
 		quantity = quantity1;
 	}
-	private void setTax(int type) 
+	private void setTax(int type1) 
 	{
-		if(type==1) 
+		if(type1==1) 
 			tax=price*0.125; 
-		else if(type==2) 
+		else if(type1==2) 
 			tax=price*0.125+0.02*(price+price*0.125);
-		else if(type==3) 
+		else if(type1==3) 
 		{
 			double surcharge;
 			double impDuty=0.10*price;
